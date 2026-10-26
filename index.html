@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0c">
+  <title>ShopLink TikTok</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 25px 15px;
+      background: #0a0a0c;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: #18181d;
+      border-radius: 16px;
+    }
+    h1 { color: #25f4ee; }
+    button {
+      padding: 12px;
+      margin: 4px 2px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #25252b;
+      color: white;
+    }
+    #status { color: #ff9b45; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>ShopLink TikTok</h1>
+    <p>Danh sách link của bạn</p>
+
+    <button onclick="showCategory('Rương treo')">Rương treo</button>
+    <button onclick="showCategory('Rương lớn')">Rương lớn</button>
+    <button onclick="showCategory('Rương nhỏ')">Rương nhỏ</button>
+    <button onclick="showCategory('Nhân phẩm')">Nhân phẩm</button>
+
+    <p id="status">Chọn danh mục để xem.</p>
+    <div id="links"></div>
+  </div>
+
+  <script>
+    function showCategory(name) {
+      document.getElementById('status').textContent =
+        'Danh mục: ' + name;
+
+      document.getElementById('links').textContent =
+        'Chưa kết nối cơ sở dữ liệu.';
+    }
+  </script>
+</body>
+</html>
